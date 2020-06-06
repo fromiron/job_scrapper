@@ -22,4 +22,3 @@ for row in soup_table:
 
 
 
-
