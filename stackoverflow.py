@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup
 import csv
 import re
 
-weworkremotely = 'https://weworkremotely.com/remote-jobs/search?utf8=%E2%9C%93&term='
+stackoverflow = 'https://stackoverflow.com/jobs?q='
 
-wework_db = []
+stack_db = []
 
 
 def weworkremotely_finder(word):
