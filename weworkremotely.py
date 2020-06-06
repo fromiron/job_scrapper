@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import re
 
-weworkremotely = 'https://weworkremotely.com/remote-jobs/search?utf8=%E2%9C%93&term='
+weworkremotely = "https://weworkremotely.com/remote-jobs/search?utf8=%E2%9C%93&term="
 
 wework_db = []
 
@@ -18,17 +18,16 @@ def weworkremotely_finder(word):
         url = url_wrap[0]
         company = row.find("span", {"class": "company"}).text
         title = soup.find("span", {"class": "title"}).text
-        region = soup.find("span", {"class": "region"}).text
-        time = soup.find("span", {"class": "region"}
-                         ).previous_sibling.previous_sibling.text
-        dic = {'company': company,
-               'title': title,
-               'region': region,
-               'time': time,
-               'url': url
-               }
+        locaton = soup.find("span", {"class": "region"}).text
+        time = soup.find(
+            "span", {"class": "region"}
+        ).previous_sibling.previous_sibling.text
+        dic = {
+            "company": company,
+            "title": title,
+            "locaton": locaton,
+            "time": time,
+            "url": url,
+        }
         wework_db.append(dic)
-        print(dic)
-
-weworkremotely_finder('javascript')
-
+    return wework_db

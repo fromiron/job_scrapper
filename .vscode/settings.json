@@ -1,0 +1,7 @@
+{
+  "cSpell.words": ["remoteok", "wework", "weworkremotely"],
+  "python.pythonPath": "C:\\Users\\Bell\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "100"],
+  "editor.formatOnSave": true
+}
